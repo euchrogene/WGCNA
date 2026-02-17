@@ -1,0 +1,7 @@
+## (Delete this line) Use this if you are looking for gene modules that change progressively over time (e.g. constantly going up or down). ##
+SampleID,TimePoint_Hours
+Sample_0h_A,0
+Sample_0h_B,0
+Sample_6h_A,6
+Sample_6h_B,6
+Sample_24h_A,24
