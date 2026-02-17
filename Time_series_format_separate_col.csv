@@ -1,0 +1,6 @@
+### (delete this line) Use this if you want to find modules specific to a single time point (e.g. "Which genes spike only at 12 hours?"). ###
+SampleID,Time_0h,Time_6h,Time_12h,Time_24h
+Sample_0h_A,1,0,0,0
+Sample_6h_A,0,1,0,0
+Sample_12h_A,0,0,1,0
+Sample_24h_A,0,0,0,1
