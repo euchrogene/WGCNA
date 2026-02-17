@@ -28,7 +28,7 @@ sudo mv EG_tools /usr/bin
 
 1. Install the software:
 ```
-sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git -d WGCNA -e WGCNA_v.1.0 -m "WGCNA_v.1.0 => Gene network analysis pipeline using WGCNA."
+sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git -d WGCNA -e WGCNA_v.1.0 -m "Gene network analysis pipeline using WGCNA."
 ```
 
 2. Display installed software
