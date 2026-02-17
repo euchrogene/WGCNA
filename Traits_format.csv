@@ -1,0 +1,7 @@
+SampleID,PlantHeight_cm,Chlorophyll_Content,Drought_Stress,Genotype_Mutant
+Sample_1,45.2,12.5,0,0
+Sample_2,43.8,11.8,0,0
+Sample_3,22.1,5.4,1,0
+Sample_4,24.5,6.1,1,0
+Sample_5,40.1,10.2,0,1
+Sample_6,18.2,4.8,1,1
