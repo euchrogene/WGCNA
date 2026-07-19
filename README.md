@@ -32,14 +32,15 @@ EG_tools
 WGCNA_v.2.0
 ```
 
-### 4. Uninstall
+### 4. Generate trait template examples
+```
+WGCNA_v.2.0 template -i gene_counts.csv -o trait_templates
+```
+
+### 5. Uninstall
 ```
 sudo EG_tools uninstall -t WGCNA_v.2.0 -i managene7/wgcna_package:v.2.0
 ```
-
-Docker image: `managene7/wgcna_package:v.2.0`
-
----
 
 ## Quick Start
 
@@ -54,9 +55,6 @@ WGCNA_v.2.0 all -i gene_counts.csv -traits traits.csv \
 # Tissue atlas: keep tissue-specific genes, export every module
 WGCNA_v.2.0 all -i gene_counts.csv -traits tissue_indicators.csv \
     -minfrac 0.08 -n all
-
-# Not sure how to write the trait file? Generate templates from your own samples
-WGCNA_v.2.0 template -i gene_counts.csv -o trait_templates
 ```
 
 Run `WGCNA_v.2.0 -help` for the full option list.
