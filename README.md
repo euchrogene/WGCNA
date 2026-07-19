@@ -19,7 +19,7 @@ sudo mv EG_tools /usr/bin
 
 ### 1. Install
 ```
-sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git -d WGCNA -e WGCNA_v.2.0 -m "Publication-grade weighted gene co-expression network analysis"
+sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git -d WGCNA -e WGCNA_v.2.0 -m "End-to-end weighted gene co-expression network analysis"
 ```
 
 ### 2. Display installed software
