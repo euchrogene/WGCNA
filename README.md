@@ -54,8 +54,8 @@ so do not mix them with v2.1 output in one manuscript.
 **2. Install**
 
 ```bash
-sudo EG_tools install -r https://github.com/euchrogene/WGCNA_pipeline.git \
-                      -d WGCNA_pipeline \
+sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git \
+                      -d WGCNA \
                       -e WGCNA_v2.1 \
                       -m "Weighted gene co-expression network analysis"
 ```
