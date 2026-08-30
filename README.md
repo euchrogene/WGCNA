@@ -1,6 +1,6 @@
 # WGCNA Co-expression Network Pipeline
 
-*EuchroGene WGCNA v2.1 — for EuchroGene members.*
+*EuchroGene WGCNA v.2.1 — for EuchroGene members.*
 
 A containerised weighted gene co-expression network analysis that takes an expression matrix and returns modules, phenotype associations, hub genes, functional enrichment and submission-ready figures. Networks are built with [WGCNA](https://doi.org/10.1186/1471-2105-9-559), counts are normalised with [DESeq2](https://doi.org/10.1186/s13059-014-0550-8), batch effects are removed with [limma](https://doi.org/10.1093/nar/gkv007) or [ComBat](https://doi.org/10.1093/biostatistics/kxj037), Gene Ontology enrichment runs through [clusterProfiler](https://doi.org/10.1016/j.xinn.2021.100141), and network figures are drawn with [igraph](https://igraph.org) alongside [Cytoscape](https://doi.org/10.1101/gr.1239303) tables.
 
@@ -27,7 +27,7 @@ your machine actually has:
 EG_tools
 ```
 
-If v.2.0 is listed, remove it before installing v2.1. Note the dots: the old
+If v.2.0 is listed, remove it before installing v.2.1. Note the dots: the old
 names carry them, the new ones do not.
 
 ```bash
@@ -49,7 +49,7 @@ docker rmi managene7/wgcna_package:v.2.0
 
 Results from earlier runs are not touched. Reports written by v.2.0 remain
 readable, but their Methods text and figures were produced by the older code,
-so do not mix them with v2.1 output in one manuscript.
+so do not mix them with v.2.1 output in one manuscript.
 
 **2. Install**
 
@@ -75,14 +75,14 @@ WGCNA_v.2.1
 **5. Uninstall**
 
 ```bash
-sudo EG_tools uninstall -t WGCNA_v.2.1 -i managene7/wgcna_package:v2.1
+sudo EG_tools uninstall -t WGCNA_v.2.1 -i managene7/wgcna_package:v.2.1
 ```
 
-Docker image: `managene7/wgcna_package:v2.1`
+Docker image: `managene7/wgcna_package:v.2.1`
 
 Both halves have to move together on an upgrade. The seven analysis scripts live
-inside the image and all seven changed in v2.1, one of them newly added, so a
-v2.1 wrapper against a v.2.0 image is refused before the first stage:
+inside the image and all seven changed in v.2.1, one of them newly added, so a
+v.2.1 wrapper against a v.2.0 image is refused before the first stage:
 
 ```
 [Error] The image does not contain the expected workers: export_multi_network.R.
@@ -316,7 +316,7 @@ Run `WGCNA_v.2.1` with no arguments for the full option list.
 
 > Langfelder, P., Luo, R., Oldham, M.C. and Horvath, S. (2011) Is my network module preserved and reproducible? *PLoS Computational Biology* 7: e1001057. — *when -testexpr is used*
 
-> EuchroGene WGCNA Pipeline v2.1 (2026). EuchroGene, LLC.
+> EuchroGene WGCNA Pipeline v.2.1 (2026). EuchroGene, LLC.
 
 The Methods section inside the HTML report is generated from the actual run settings and the tool versions queried at run time, ready to copy into a manuscript.
 
