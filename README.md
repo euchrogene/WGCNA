@@ -56,7 +56,7 @@ so do not mix them with v2.1 output in one manuscript.
 ```bash
 sudo EG_tools install -r https://github.com/euchrogene/WGCNA.git \
                       -d WGCNA \
-                      -e WGCNA_v2.1 \
+                      -e WGCNA_v.2.1 \
                       -m "Weighted gene co-expression network analysis"
 ```
 
@@ -69,13 +69,13 @@ EG_tools
 **4. Show help contents**
 
 ```bash
-WGCNA_v2.1
+WGCNA_v.2.1
 ```
 
 **5. Uninstall**
 
 ```bash
-sudo EG_tools uninstall -t WGCNA_v2.1 -i managene7/wgcna_package:v2.1
+sudo EG_tools uninstall -t WGCNA_v.2.1 -i managene7/wgcna_package:v2.1
 ```
 
 Docker image: `managene7/wgcna_package:v2.1`
@@ -96,13 +96,13 @@ v2.1 wrapper against a v.2.0 image is refused before the first stage:
 **1. Minimum run, counts only**
 
 ```bash
-WGCNA_v2.1 -i counts.csv -o wgcna_results
+WGCNA_v.2.1 -i counts.csv -o wgcna_results
 ```
 
 **2. With phenotypes, the usual case**
 
 ```bash
-WGCNA_v2.1 -i counts.csv \
+WGCNA_v.2.1 -i counts.csv \
            -traits phenotypes.csv \
            -species "Vaccinium virgatum" \
            -o wgcna_results
@@ -111,7 +111,7 @@ WGCNA_v2.1 -i counts.csv \
 **3. Publication run: enrichment, robustness, provenance**
 
 ```bash
-WGCNA_v2.1 -i counts.csv \
+WGCNA_v.2.1 -i counts.csv \
            -traits phenotypes.csv \
            -emapper eggnog_annotations.tsv \
            -species "Vaccinium virgatum" \
@@ -124,7 +124,7 @@ WGCNA_v2.1 -i counts.csv \
 **4. Batch effect removed, biology preserved**
 
 ```bash
-WGCNA_v2.1 -i counts.csv \
+WGCNA_v.2.1 -i counts.csv \
            -traits phenotypes.csv \
            -covariates sample_metadata.csv \
            -batch sequencing_run \
@@ -135,7 +135,7 @@ WGCNA_v2.1 -i counts.csv \
 **5. Figures sized for a specific journal**
 
 ```bash
-WGCNA_v2.1 -i counts.csv -traits phenotypes.csv \
+WGCNA_v.2.1 -i counts.csv -traits phenotypes.csv \
            -figwidthmm 89 -basept 8 -fillby gs \
            -o wgcna_results
 ```
@@ -143,8 +143,8 @@ WGCNA_v2.1 -i counts.csv -traits phenotypes.csv \
 **6. Phenotype templates, and a check before a long run**
 
 ```bash
-WGCNA_v2.1 template -i counts.csv -o phenotype_templates
-WGCNA_v2.1 template -i counts.csv -traits my_phenotypes.csv
+WGCNA_v.2.1 template -i counts.csv -o phenotype_templates
+WGCNA_v.2.1 template -i counts.csv -traits my_phenotypes.csv
 ```
 
 The first writes a file per phenotype form plus a format guide; the second
@@ -153,7 +153,7 @@ reports how every column will be read and whether the sample IDs match.
 **7. Re-run one stage against existing results**
 
 ```bash
-WGCNA_v2.1 export -o wgcna_results -traits phenotypes.csv -topk 50
+WGCNA_v.2.1 export -o wgcna_results -traits phenotypes.csv -topk 50
 ```
 
 Modes: `all` (default, may be omitted), `run`, `traits`, `hubs`, `export`, `enrich`, `stability`, `template`.
@@ -258,7 +258,7 @@ Every figure is written as a vector PDF for submission and a PNG for the report.
 | `-gosimplify` | `true` | Collapse redundant GO terms |
 | `-seed` | `12345` | Random seed, recorded in the Methods |
 
-Run `WGCNA_v2.1` with no arguments for the full option list.
+Run `WGCNA_v.2.1` with no arguments for the full option list.
 
 ---
 
@@ -272,7 +272,7 @@ Run `WGCNA_v2.1` with no arguments for the full option list.
 
 **Ordinal is the one form that cannot be detected.** A 0-5 severity score and a measurement in grams both look like "numeric with several values". Left alone, an ordinal column is tested with Pearson, which assumes the steps are equally spaced. Declare it in `-traittypes` and it is tested with Spearman instead, which uses only the order. Declare `ignore` for plot numbers, dates and free-text notes, which would otherwise be read as categorical variables with as many levels as there are samples.
 
-**Check the file first.** `WGCNA_v2.1 template -i counts.csv -traits your_file.csv` reports how each column will be read and whether the sample IDs match. A pipeline run stops before any stage starts when the IDs do not match, listing every unmatched name on both sides together with the likely fix (a case variant on the other side, or a summary column such as `avg` sitting in the expression matrix). Fix the names and rerun; nothing is computed until they agree.
+**Check the file first.** `WGCNA_v.2.1 template -i counts.csv -traits your_file.csv` reports how each column will be read and whether the sample IDs match. A pipeline run stops before any stage starts when the IDs do not match, listing every unmatched name on both sides together with the likely fix (a case variant on the other side, or a summary column such as `avg` sitting in the expression matrix). Fix the names and rerun; nothing is computed until they agree.
 
 **Hub genes.** The count is a result of the criterion, not a setting, and the figures show the set the criterion defines rather than a fixed number. If a module returns more hubs than a panel can carry, tighten the criterion with `-kmethreshold` (0.85 or 0.9), which is a rule a reader can evaluate, rather than capping the count with `-nhub`, which is not. `-labeltop` thins the text labels without changing which genes are marked as hubs.
 
